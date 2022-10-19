@@ -2,7 +2,7 @@ from IdentityCard import IdentityCard
 
 identity_cards: list[IdentityCard] = []
 
-for x in range(1):
+for x in range(5):
     identity_card = IdentityCard()
     print("Insert forename")
     identity_card.forename = input()
