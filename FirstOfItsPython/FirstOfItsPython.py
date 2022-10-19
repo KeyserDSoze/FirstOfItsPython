@@ -1,6 +1,7 @@
 from IdentityCard import IdentityCard
+from typing import List
 
-identity_cards: list[IdentityCard] = []
+identity_cards: List[IdentityCard] = []
 
 for x in range(5):
     identity_card = IdentityCard()
