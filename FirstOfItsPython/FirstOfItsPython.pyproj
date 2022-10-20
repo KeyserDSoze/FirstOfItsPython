@@ -21,17 +21,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AppSettings\AppSettings.py" />
+    <Compile Include="Settings\AppSettings.py" />
     <Compile Include="FirstOfItsPythonWithMemoryCheck.py" />
     <Compile Include="FirstOfItsPython2.py" />
     <Compile Include="FirstOfItsPython.py" />
     <Compile Include="IdentityCard.py" />
     <Compile Include="MyFirstModule.py" />
-    <Compile Include="SqlIntegration\SqlIntegration.py" />
+    <Compile Include="Storage\SqlIntegration.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AppSettings\" />
-    <Folder Include="SqlIntegration\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Storage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" />

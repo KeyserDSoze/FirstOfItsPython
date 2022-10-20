@@ -1,13 +1,12 @@
 from IdentityCard import IdentityCard
 from typing import List
-from SqlIntegration.SqlIntegration import *
-from AppSettings.AppSettings import *
+from Storage.SqlIntegration import *
+from Settings.AppSettings import *
 
 settings = AppSettings("appsettings.json")
-
 identity_cards: List[IdentityCard] = []
-
-for x in range(0):
+print(identity_cards)
+for x in range(3):
     identity_card = IdentityCard()
     print("Insert forename")
     identity_card.forename = input()
@@ -17,14 +16,12 @@ for x in range(0):
     identity_card.city = input()
     identity_cards.append(identity_card)
     print(len(identity_cards))
+    print(identity_card)
 
 for identity_card in identity_cards:
     print(identity_card.get_values())
-
+print(identity_cards)
 var = SqlIntegration(settings.database_connection)
-var.connect()
-print(var.query("select * from [dbo].[User]"))
-var.disconnect()
+print(var.execute_query("CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255))"))
+print(var.read_query("select * from [dbo].[Persons]"))
 
-
-    
