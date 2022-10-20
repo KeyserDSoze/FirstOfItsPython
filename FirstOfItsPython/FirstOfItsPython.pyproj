@@ -21,11 +21,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppSettings\AppSettings.py" />
     <Compile Include="FirstOfItsPythonWithMemoryCheck.py" />
     <Compile Include="FirstOfItsPython2.py" />
     <Compile Include="FirstOfItsPython.py" />
     <Compile Include="IdentityCard.py" />
     <Compile Include="MyFirstModule.py" />
+    <Compile Include="SqlIntegration\SqlIntegration.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppSettings\" />
+    <Folder Include="SqlIntegration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
