@@ -10,6 +10,7 @@ class SqlIntegration():
         connection = pyodbc.connect(self.connection_string)
         cursor = connection.cursor()
         cursor.execute(query)
+        connection.commit()
         del connection
 
     def read_query(self, query):
