@@ -1,7 +1,23 @@
+from asyncio.windows_events import NULL
 from IdentityCard import IdentityCard
 from typing import List
 from Storage.SqlIntegration import *
 from Settings.AppSettings import *
+
+ala = None
+
+try:
+    print(ala.a())
+except:
+    print("ala doesn't exist")
+
+if ala is None:
+    print("ala doesn't exist")
+else:
+   ala.a()
+
+
+#print(ala.a())
 
 settings = AppSettings("appsettings.json")
 var = SqlIntegration(settings.database_connection)
@@ -20,6 +36,29 @@ print(var.execute_query('''
     END
             '''))
 print(var.read_query("select * from [dbo].[Table_IdentityCards]"))
+
+q = list(["apple", "cherry"])
+q.append("banana")
+print(q)
+for k in q:
+    print(k)
+
+x =  set(("apple", "banana", "cherry"))
+x.add("dasdsada")
+print(x)
+
+for t in x:
+    print(t)
+
+thistuple = tuple(("apple", "banana", "apple", "cherry")) # note the double round-brackets
+print(thistuple)
+print(thistuple.count("apple"))
+print(len(thistuple))
+for x in thistuple:
+    print(x)
+
+
+
 identity_cards: List[IdentityCard] = []
 print(identity_cards)
 print("insert the word 'e' to exit")
